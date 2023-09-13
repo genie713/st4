@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크관련css</title>
+</head>
+<body>
+    <h1>링크관련css</h1>
+    <ul>
+        <li><a href="https://www.naver.com">검색엔진1</a></li>
+        <li><a href="https://www.google.com">검색엔진2</a></li>
+        <li><a href="https://www.daum.net">검색엔진3</a></li>
+    </ul>
+    <style>
+        /* 
+        a태그
+        밑줄문자
+        방문한적없을 경우 글자색->파랑
+        방문한경우 ->보라색
+         */
+         a{
+            /*문서내 모든 a태그*/
+            /* color: #f86; */  
+         }
+         a:link{color:#02fc2c;}
+         a:visited{color:#f00;}
+         a:hover{color:#000; background-color:#333}
+         a:active{color: #e5e5;}
+         a:focus{color:#00f}
+
+</style>
+</body>
+</html>

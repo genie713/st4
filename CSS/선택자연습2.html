@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자연습2</title>
+    <style>
+        /* 섹션의 제목을 진하게 크게 24px 보라 
+          섹션의 제목 선택자 -> 진하게 크게 24px
+          줄간 line-height
+        
+          */
+        body{
+            font-size: 14px; 
+            color: #ff0101;
+            /* font-family: "나눔","굴림","바탕체"; */
+        }
+        .title{
+            font-weight:bold;
+            font-size: 24px;
+            color:#4f04b1
+        }
+        /* 
+        문서내 모든 a
+        a{}
+        */
+        /* 
+        문서내 모든 클래스명이 title요수 후손 중 모든 a태그
+        .title a{}
+        */
+
+        .title a{
+            color:#000;
+            text-decoration: none; /*밑줄문자안씀*/
+            }
+            /* .title a에 마우스 오버하면 글자색 보라 밑줄문자
+            배경색 투명50%  파랑
+             */
+        .title a:hover{
+            color: #b08181;
+            text-decoration: underline;
+            background-color: rgba(0,0,255,0.5);
+            padding: 0.5rem 1rem;
+        }
+
+
+        .box{
+            color:black;
+            font-size: 13px;
+            margin:2rem; /*body의 글자크기*2*/
+            background-color: #c2c2c2; /*테스트용-제거*/
+            line-height: 1.4;
+        }
+        #section2 .box:nth-child(2){
+            font-family: "궁서체";
+            color:#014dff;
+        }   
+
+        #category .position .xans-record-:first-child a{
+            color: #ff0000;
+            font-weight: bold;
+        }
+        #category .position .xans-record-:nth-child(3) a{
+            background-color:rgba(0,0,255,0.5);
+            text-decoration: underline;
+        }
+        </style>
+</head>
+<body>
+    <div class="wrap">
+        <header></header>
+        <div class="main">
+            <!-- #section$.container*2>.inner>(.title+{제목})+.desc>.box -->
+            <div id="section1" class="container">
+                <div class="inner">
+                    <div class="title"><a href="">제목</a></div>
+                    <div class="desc">
+                        <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem exercitationem, temporibus quae placeat autem, adipisci perspiciatis fuga aliquid sunt libero numquam! Veniam quasi et explicabo modi unde nam. Accusamus, nam!
+                        Ad repellendus quia, sapiente eligendi et, iusto adipisci, beatae dolor placeat quo repellat! A quod enim ea, fugiat aperiam temporibus? Illo consectetur ratione earum corporis doloribus, molestiae error consequatur. Facilis. ipsum dolor sit amet consectetur.</div>
+                        <div class="box">Blanditiis perspiciatis inventore odio quae quibusdam!</div>
+                    </div>
+                </div>
+            </div>
+            <div id="section2" class="container">
+                <div class="inner">
+                    <div class="title">제목</div>
+                    <div class="desc">
+                        <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolore alias nobis, autem nam quidem saepe odio tempore, voluptas facilis, commodi ipsa accusantium unde atque nulla rem quo a quas.
+                        Ex quo quidem, dicta voluptatibus necessitatibus aspernatur, molestias consequatur ipsam soluta explicabo, tenetur possimus maiores! Cumque, labore natus! Culpa cum quaerat commodi porro eius eaque eligendi qui, rerum ducimus sapiente. ipsum dolor sit amet consectetur.</div>
+                        <div class="box">Dolore eos veniam cum libero deleniti.</div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <footer></footer>
+    </div>
+    </div>
+</body>
+</html>
