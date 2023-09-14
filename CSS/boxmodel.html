@@ -20,7 +20,7 @@
          /* 바깥여백
            margin:상 우 하 좌;
         */
-        margin: 50px;
+        /* margin: 50px; */
       }
       /*
       두번째 .box padding을 상우하좌 50px
@@ -30,8 +30,29 @@
         padding: 28px 50px; /*두자리는 상하 좌우; 세자리는 상 좌우 하; */
         background-color: #8affc3; /* 백그라운드 컬러는 보더까지 */
       }
+      /* block 레벨 */
+      *{padding: 0; margin: 0;}
+      /*ㅇ
+      요소의 수평크기
+      lm+lb+lp+content(width)+rp+rb+rm
+      요소의 수직크기
+      tm+tb+tp+content(height) */
+      h1{
+        background-color: #e8c8a1;
+      }
+       */
+      .box:nth-of-type(1){
+        margin: 50px;
+      }
 
-       
+      .box:nth-of-type(2){
+        width: 300px;
+        margin: 100px auto;
+         /* margin:상하 auto; 불록레벨을 가운데*/
+      }
+
+      
+  
     </style>
 </head>
 <body>
