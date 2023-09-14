@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델 3-박스모델 계산법</title>
+<style>
+*{margin: 0; padding: 0;}
+.box{
+    /* auto(lm) +10(lb) +50(lp) +400(width) + 50(rp) + 10(rb) +auto(rm) */
+    width: 400px;
+    height: 300px; 
+    padding: 50px;
+    border: 10px solid #f86;
+    margin: 50px auto; /* 블록레벨의 가운데 정렬*/
+    background-color: #494949;
+    color: #ffffff;
+ }
+ .box1{
+    box-sizing: content-box;
+    /* content-box 기본값 */
+ }
+ 
+ .box2{
+ box-sizing: border-box;
+ /* 
+  기본값 box-sizing 이라는 박스모델 계산법을 지정 
+  width/height 지정값이
+   박스모델 content 영역지정 -> 기본값 -content-box
+   박스모델 border+padding+content -> border-box
+  width 선언된 값은 border+padding+content 영역까지 포함해서 인식
+  */
+
+ }
+
+</style>
+
+</head>
+<body>
+    <!-- .wrap -->
+    <div class="wrap">
+        <!-- .box.box$*2>lorem*2 -->
+<div class="box box1">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit consectetur iure obcaecati. Deserunt officia ipsa ducimus sint adipisci. Iure provident ratione dicta doloremque ut! Incidunt maxime vero est quasi doloribus?</div>
+    <div>Beatae incidunt in magni quam ab, ipsa iusto, voluptatem eligendi, nesciunt vel reiciendis perspiciatis ipsum repellat aliquam sunt quos numquam maxime. Vel mollitia odit ratione excepturi, deserunt distinctio praesentium eos.</div>
+</div>
+<div class="box box2">
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere deleniti nemo, atque minus maiores magnam culpa quidem autem saepe accusamus commodi quibusdam ut dolor harum adipisci labore dolorum assumenda eligendi.</div>
+    <div>Reiciendis corrupti obcaecati maiores corporis, nulla tempora quae minima aliquid exercitationem laboriosam labore magni consectetur, nihil dolore aperiam dignissimos iure eaque a quibusdam totam! Rerum consectetur quos consequuntur nam cupiditate.</div>
+</div>
+
+    </div>
+</body>
+</html>
