@@ -1,0 +1,31 @@
+/* @import선언되는 선언부 문서앞에서 작성 */
+/* 웹폰트 선언부 */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;600&family=Noto+Sans+KR:wght@100;300;400;700;900&display=swap');
+/* 
+font-family: 'IBM Plex Sans KR', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+/* 공통 */
+body{
+    font-family:'IBM Plex Sans KR', 'sans-serif','Noto Sans KR', 'sans-serif';
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.4;
+    font:14px/1.4 'IBM Plex Sans KR', 'sans-serif','Noto Sans KR', 'sans-serif'; 
+    /*
+    글꼴 간단표기
+    font-style font-variant font-weight font-size;
+    */
+    -webkit-text-size-adjust: none;/*ios의 텍스트 핸드폰방향전환시 진하게되는 현상방지 */
+}
+
+a:link{color:#333; text-decoration: none;}
+a:visited{color:#333; text-decoration: none;}
+a:hover{color:#ff0000; text-decoration: underline;}
+
+/* 타이포그래피 */
+.page-title{
+  font-size: 2.5rem; /*body크리보다 2.5배*/
+  font-weight: 700;
+  font-family: 'IBM Plex Sans KR', 'sans-serif';
+}
