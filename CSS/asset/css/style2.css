@@ -1,7 +1,7 @@
 /* 나눔고딕 웹폰트선언 - 구글폰트 import */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 /* font-family: 'Nanum Gothic', sans-serif; */
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 /* reset */
 *{margin:0; padding: 0;}
 
@@ -35,12 +35,32 @@ header{
  background-color: #a0a0a0;
 }
 /* 
- h1은 너비를 1400을 가지고
+ ㅓㅂ`h1은 너비를 1400을 가지고
  부모영역에서 가운데
 */
 .page-title{
  width: 90%;
  max-width: 1400px;
- margin:0 auto;
+ /* margin:0 auto; */
+ margin: 50px auto; 
+ /* margin:50px auto; 부모가 border */
  background-color: tomato;
+ font-family: 'Dancing Script', cursive;
 }
+
+.container{}
+
+section{
+ background-color: #e2e2e2;
+ margin-top: 50px;
+ /* min-height: 100px; */
+ height: 100px;
+/* width: 50vw;  뷰포트(브라우저)의 너비 50% */
+ width: 300px;
+ margin: 50px auto;
+}
+
+#section1{overflow: auto;}
+#section2{overflow: hidden;}
+/* #section3{overflow: scroll;} */
+#section3{overflow: auto;}
