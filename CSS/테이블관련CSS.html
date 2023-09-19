@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블관련CSS</title>
+    <style>
+        *{margin: 0; padding:0;}
+        .container{margin: 50px;}
+        .table.sample{
+          border-collapse: collapse;
+          table-layout: fixed;
+          box-sizing: boder-box;
+          width: 100%;
+          border:1px solid #000;
+          border-top: 10px solid #000000;
+          }
+        .sample tr:nth-child(1) th{
+          background-color: #000;
+          color:#ffffff;
+          padding: 1rem;
+        }
+        /* 짝수번째줄 백그라운드 칼라 지정*/
+        .sample tr:nth-child(even) td{
+            background-color: #ffa3a3;
+        }
+        /* 홀수번째줄 백그라운드 칼라 지정 */
+        .sample tr:nth-child(odd) td{
+            background-color: #37daff;
+        }
+        /* 마우스 오버시 백그라운드 컬러 변경 */
+        .sample tr:hover td{
+            background-color: #68f;
+        }
+        .sample th,
+        .sampel td{
+            padding: 1em;
+            border: 1px solid #000;
+            box-sizing: border-box; /*계산이 편해집니다*/
+        }
+         .sample th:nth-child(1){
+            width: 11rem;
+         }
+         .sample th:nth-child(3){
+            width: 150px
+         }
+
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <!-- table.sample>tr>td>*3>{title$}^tr -->
+    <table class="sample">
+        <th>title1</th>
+        <th>title2</th>
+        <th>title3</th>
+     </tr>
+     <tr>
+        <td>가나다 라마바 사아자</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum, eligendi, repellendus enim ipsa hic ea excepturi asperiores voluptas voluptatem quod voluptates incidunt, iusto dignissimos illo molestiae et ad aut.
+        Eos, incidunt aut? Quam provident eveniet quod, rerum facere, laborum mollitia dicta possimus dolore ipsa sequi! Accusamus fugiat ut quos maiores consequuntur rem facere unde quam! Aut saepe modi facilis.</td>
+        <td>Labore, vitae.</td>
+     </tr>
+     <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Laudantium, repellendus!</td>
+        <td>Vitae, molestias.</td>
+     </tr>
+     <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Deserunt, velit?</td>
+        <td>Excepturi, a?</td>
+     </tr>
+    </table> 
+    </div>   
+</body>
+</html>
