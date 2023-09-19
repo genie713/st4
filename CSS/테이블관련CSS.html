@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블관련CSS</title>
+    <style>
+        *{margin: 0; padding:0;}
+        .container{margin: 50px;}
+        table, tr, td, th{
+            box-sizing: border-box;
+        }
+        table.sample{
+          border-collapse: collapse;
+          table-layout: fixed;
+          /*테이블과 테이블너비를 지정할때*/
+          box-sizing: boder-box;
+          width: 100%;
+          border: 1px solid #000;
+          border-top: 10px solid #000000;
+        }
+        .sample tr:nth-child(1) th{
+          background-color: #000;
+          color:#ffffff;
+          padding: 1rem;
+        }
+        .sample tr:nth-child(1) td{vertical-align: middle;}
+        .sample tr:nth-child(2) td{vertical-align: top;}
+        .sample tr:nth-child(3) td{vertical-align: middle;}
+        .sample tr:nth-child(4) td{vertical-align: bottom;}
+
+        /* 짝수번째줄 백그라운드 칼라 지정*/
+        .sample tr:nth-child(even) td{
+            /* tr의 홀수번재 중 td */
+            background-color: #e3e3e3;
+        }
+        /* 홀수번째줄 백그라운드 칼라 지정 */
+        .sample tr:nth-child(odd) td{
+            background-color: #ffffff;
+        }
+        /* 마우스 오버시 백그라운드 컬러 변경 */
+        .sample tr:hover td{
+            background-color: #68f;
+        }
+        .sample th,
+        .sampel td{
+            padding: 1em;
+            border: 1px solid #000;
+            box-sizing: border-box; /*계산이 편해집니다*/
+        }
+         .sample th:nth-child(1){
+            width: 13em;
+         }
+         .sample th:nth-child(3){
+            width: 150px
+         }
+
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <!-- table.sample>tr>td>*3>{title$}^tr -->
+    <table class="sample">
+        <th>title1</th>
+        <th>title2</th>
+        <th>title3</th>
+     </tr>
+    <!-- 둘째 tr -->
+     <tr>
+        <td>가나다 라마바 사아자</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cum, eligendi, repellendus enim ipsa hic ea excepturi asperiores voluptas voluptatem quod voluptates incidunt, iusto dignissimos illo molestiae et ad aut.
+        Eos, incidunt aut? Quam provident eveniet quod, rerum facere, laborum mollitia dicta possimus dolore ipsa sequi! Accusamus fugiat ut quos maiores consequuntur rem facere unde quam! Aut saepe modi facilis.</td>
+        <td>Labore, vitae.</td>
+     </tr>
+     <!-- 셋째 tr -->
+     <tr>
+        <td>abc def ghi</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusamus nemo nulla quasi in vitae sapiente maxime sunt eveniet eos similique molestias, fugit ab ea quisquam distinctio explicabo. Necessitatibus, aut.
+        Ducimus quam eum modi omnis rem optio id sint quis! Quam dolorem sint corporis minus quis dolore similique nostrum, sit ullam earum beatae numquam, esse repellendus adipisci magnam, ab fuga?</td>
+        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum magni labore consectetur incidunt, iste harum, deserunt porro ipsa veritatis eos eum animi quae, vero molestias enim rem dignissimos voluptate laboriosam?
+        Quibusdam sequi ratione veniam tempore ab reprehenderit, quas dolore recusandae ea ipsam eaque quisquam eos dolores atque aspernatur libero? Dignissimos nisi eveniet magni error, harum ad fuga? Maxime, autem eligendi.</td>
+     </tr>
+     <!-- 넷째 tr -->
+     <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Deserunt, velit?</td>
+        <td>Excepturi, a?</td>
+     </tr>
+    </table> 
+    </div>   
+</body>
+</html>
