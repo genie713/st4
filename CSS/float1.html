@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit exercitationem in, dolore pariatur dolorem neque placeat quasi amet, aspernatur fuga eveniet. Esse, veritatis iusto ipsa eaque aperiam velit temporibus facilis.
+            Iusto deleniti omnis ea ullam aliquam vel nihil. Possimus ipsa, vitae dolorem esse asperiores natus nesciunt sed praesentium mollitia? Placeat, autem dolores enim necessitatibus ullam maxime. Iure velit dolorum veritatis.
+        </div>
+        <div class="img-wrap"><img src="background/images/img1.png" alt="플로팅연습"></div>
+        <div class="text2">
+            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus tempore aliquam explicabo fuga laudantium ex, culpa dicta aspernatur similique expedita necessitatibus ipsam? Corrupti officiis vitae dolores consequuntur ipsa, reprehenderit eius.</div>
+            <div>Ratione inventore placeat, minima dignissimos cum numquam reprehenderit, omnis consectetur dolorum veritatis odio molestias ullam? Quis ratione ipsa, modi a dolorem nisi, assumenda harum, non accusantium necessitatibus quidem quasi autem!</div>
+        </div>
+    </div>
+    <style>
+        /* 너비는 부모에게 지정
+        높이는 자식이 결정 */
+        .text{}
+        /* img가 부모의 크기를 따르게 하는 방법 */
+        /* .img-wrap{
+            width: 100%;
+            border: 1px solid #f00;
+            background-color: #ffb8b8;
+        } */
+        .img-wrap {
+            float:left;
+            width: 50%;
+            max-width: 400px;
+            border: 1px solid #000000;
+            background-color: #ffb8b8;
+        }
+        /*  */
+        .img-wrap img{
+            max-width:100%;
+     border: 1px solid #000;
+    }
+            .text2{
+                clear:left;
+            }
+
+    /* width: 300px; */
+    /* float: left; */
+
+
+
+    </style>
+</body>
+</html>
