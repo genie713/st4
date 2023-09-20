@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float2-float로 layout 잡기</title>
+<style>
+  /* reset */
+  *{margin:0; padding: 0;}
+  body{
+    /* 기본서체 */
+    font-size: 14px; 
+    color: brown;
+  }
+    /* 레이아웃 */
+    /* header 레이아웃 */
+    header{
+        padding: 1rem; /*rem은 body에 지정한 크기, em은 header에 지정한 크기 기준 */
+        width: auto;
+        background-color: #dadada;
+    }
+    /* container */
+    .container{
+        width: 90%;
+        max-width: 1400px;
+        background-color: #cbcbcb;
+        margin:0 auto; /* 블럭레벨의 가운데 위치 */
+        overflow: hidden; /*float가 지정된 자식을 인식시키기 위해*/
+    }
+    /* float를 지정한 요소의 이후요소에게 float 영향 제거 -  외워라!! */
+    .container:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+
+    .container .col{
+        box-sizing: border-box;
+        border: 1px solid #000;
+        background-color: #fddddd;
+        min-height: 300px;
+    }
+    .side-menu{
+        float:left;
+        width: 20%;
+        max-width: 250px;
+    }
+    .content{
+        float:left;
+        width: 60%;
+        max-width: 900px;
+
+    }
+    .right-aside{
+        float:left;
+        width: 20%;
+        max-width: 250px;
+    }
+
+     /* footer 레이아웃 */
+    footer{
+        padding: 1rem; /*rem은 body에 지정한 크기, em은 header에 지정한 크기 기준 */
+        width: auto;
+        background-color: #dadada;
+    }
+</style>
+</head>
+<body>
+   <header>header</header>
+   <div class="container">
+    <div class="side-menu col">side-menu</div>
+    <div class="content col">content</div>
+    <aside class="right-aside col">aside</aside>
+   </div> 
+   <footer>footer</footer>
+</body>
+</html>
