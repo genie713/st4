@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform2-수직 수평 가운데 정렬</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .wrap{
+          /* 브라우저의 너비와 높이를 다 써라  */
+          width: 100vw;
+          height: 100vw;
+          background-color: #b8b8b8 ;
+          position: relative;
+        }
+        .center-box{
+            position: absolute; /*부모로부터 너비를 가져오지 못한다, 기준조상을 꼭 지정해야한다-.wrap이 기준조상*/
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 1em 2em;
+            font-size: 25px;
+            background-color: #68f;
+        }
+        .center-box .inner{
+            font-size: 30px;
+            text-align: center;
+            background-color: #f86;
+        }
+        .center-box .inner p{
+           margin-bottom: 0;
+        }
+        .center-box .inner p:first-child{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="center-box">
+            <div class="inner">
+                <p>Section title</p>
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
