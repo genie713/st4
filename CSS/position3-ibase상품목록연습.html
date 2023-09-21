@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position3-ibase 상품목록 연습</title>
+    <link rel="stylesheet" href="asset/css/cafe24reset.css">
+    <style>
+        .wrap{
+            /* 최대너비 1240 상단여백 50px  좌우 auto*/
+            max-width: 1240px;
+            margin: 50px auto;
+        }
+        .ec-base-product{         
+        }
+        .ec-base-product .prdList{     
+            background-color: #ccc;   
+            overflow: hidden; /*float가 지정된 li를 인식하기 위해*/
+        }
+        .ec-base-product .prdList::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+           
+        .ec-base-product .grid2 > li{width:50%}
+        .ec-base-product .grid3 > li{width:33.3333%}
+        .ec-base-product .grid4 > li{width:25%}
+        .ec-base-product .grid5 > li{width:20%}
+    
+        .ec-base-product .prdList >li{         
+            /* display: inline-block; */
+            float: left;
+            box-sizing: border-box;
+            background-color: #f68;
+            /* 배경색이 적요되는 양쪽 여백10px */
+            padding:0 10px;
+        }
+
+        .ec-base-product .prdList .thumbnail{
+            position: relative;
+        }
+
+        .ec-base-product .prdList >li .icon__box{
+            /* 일반흐름제외, 기준요소 설정 */
+            position: absolute;
+            /* 위치설정  */
+            right: 0px; top:0px;
+
+
+        }
+
+        .ec-base-product .prdList >li .icon__box >span{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+ <div class="ec-base-product">
+    <div class="mainTitle"></div>
+    <ul class="prdList grid4">
+        <!-- li.xans-record-*2>.thumbnail>a>img^div.icon__box>span*2>img -->
+        <li class="xans-record-">
+            <div class="thumbnail">
+                <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
+                <div class="icon__box">
+                    <span><img src="cart" alt=""><img src="asset/img/icon_202107202127542500.png" alt=""></span>
+                    <span><img src="wish" alt=""><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                </div>
+                <span class="benefit"></span>
+            </div>
+            <div class="description"></div>
+        </li>
+        <li class="xans-record-">
+            <div class="thumbnail">
+                <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
+                <div class="icon__box">
+                    <span><img src="cart" alt=""><img src="asset/img/icon_202107202127542500.png" alt=""></span>
+                    <span><img src="wish" alt=""><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                </div>
+                <span class="benefit"></span>
+            </div>
+            <div class="description"></div>
+        </li>
+        <li class="xans-record-">
+            <div class="thumbnail">
+                <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
+                <div class="icon__box">
+                    <span><img src="cart" alt=""><img src="asset/img/icon_202107202127542500.png" alt=""></span>
+                    <span><img src="wish" alt=""><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                </div>
+                <span class="benefit"></span>
+            </div>
+            <div class="description"></div>
+        </li>
+        <li class="xans-record-">
+            <div class="thumbnail">
+                <a href=""><img src="asset/img/f46d04dc642d3b8507058c347ccf4fb0.jpg" alt=""></a>
+                <div class="icon__box">
+                    <span><img src="cart" alt=""><img src="asset/img/icon_202107202127542500.png" alt=""></span>
+                    <span><img src="wish" alt=""><img src="asset/img/icon_202107191654165100.png" alt=""></span>
+                </div>
+                <span class="benefit"></span>
+            </div>
+            <div class="description"></div>
+        </li>
+
+    </ul>
+ </div>
+</div>
+</body>
+</html>
