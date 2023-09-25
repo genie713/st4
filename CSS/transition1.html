@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition1 요소밑에 밑줄 만들기</title>
+<style>
+    *{margin: 0; padding: 0;}
+    .sample{
+        margin: 50px;
+        background-color: #ccc;
+    }
+    /* reset */
+    li{list-style: none;}
+    a:link,
+    a:visited,
+    a:hover{
+        text-decoration: none;
+        color: #000;
+    }
+
+    /* test용 */
+    /* .box>ul>li>a>{menu1} */
+    .box{}
+    .box ul{}
+    .box ul li{
+        /* background-color: #ff0000; */
+    }
+    .box ul li a{
+        background-color: rgba(0,0,255,0.2);
+        padding: 0.5em 1.5em;
+        display: inline-block;
+    }
+    
+    /* 메뉴밑에 밑줄그리기 */
+    .box ul li a{
+        position: relative;
+
+    }
+    .box ul li a:after{
+       content:"";
+       position: absolute;
+       left:0; bottom:0;
+       display:block;
+       width: 100%;
+       background-color: #000;
+       height: 4px;
+       transform: scale(0);
+       transform-origin: 100% 0;
+       transition:transform 0.4s;
+    }
+    .box ul li:hover a:after{
+        transform: scale(1);
+        transition: transform 1s; 
+        background-color: rgba(255,0,0,0.2);
+        transform-origin: 0, 0 ;  
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="sample sample1">
+        <div class="box">
+            <ul>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu2</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
