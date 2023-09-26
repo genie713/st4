@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex item 정렬-주축 오른쪽, 교차축 위</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        .wrap{
+            width: 90%; margin: 50px auto;
+            background-color: #ccc;
+        }
+        .parent{
+            background-color: #69f;
+        }
+        .child{
+            background-color: rgba(3, 132, 85, 0.5); 
+            border: 1px solid #000;
+            padding: 2em;
+            
+        }
+
+        /* flex box 속성 선언 */
+        /* 주축오른쪽 교차축 위 */
+        /* 방향은 container에게, 크기는 item에게 설정 선언 */
+        .container{
+            display: flex;
+            /* align-itemx: stretch; 기본값 */
+            align-items: center;
+            min-height: 300px;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+        .item{
+            /* container에 display:fex, flex-direction:row 기본설정과 동일
+            flex-grow:0;
+            flex-shrink: 1;
+            flex-basis: auto; */             
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- .parent.container>.child.item*4>{item$} -->
+        <div class="parent container">
+            <div class="child item">item1</div>
+            <div class="child item">item2</div>
+            <div class="child item">item3</div>
+            <div class="child item">item4</div>
+        </div>
+    </div>
+</body>
+</html>
