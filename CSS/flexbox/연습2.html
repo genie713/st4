@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox 3번</title>
+    <!-- header>.inner>.logo.item+.gnb.item+.util.item -->
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        .wrap{
+            margin-top: 50px;
+            background-color: #ccc;
+        }
+        header{
+            background-color: #999;
+        }
+        header .inner{
+            width: 90%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #000;
+        }
+        header .parent{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{width: 100px; height: 100px;}
+        .gnb{}
+        .util{font-size: 12px;}
+        .item{
+            flex:none;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="wrap">
+      <!-- header>.inner>.logo.item+.gnb.item+.util.item -->
+      <header>
+        <div class="inner parent">
+          <div class="logo item">로고</div>
+          <div class="gnb item">카테고리(글로벌네비게이션바) 카테고리(글로벌네비게이션바)</div>
+          <div class="util item">상단유틸메뉴</div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
