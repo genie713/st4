@@ -10,8 +10,18 @@
 </head>
 <body>
     <div id="wrap">
+        <script>
+            $(document).ready(function(){
+                $('.btn_sitemap').click(function() {
+                $(this).attr("aria-expanded", true);
+                $('header').toggleClass('active');
+                $('body').toggleClass('hidden');
+	        });
+            }
+            );
+        </script>
         <!-- header -->
-        <header class="header_down">
+        <header class="header_down active">
             <div class="header_wrap fles-container">
                 <h1 class="header_logo item">
                     <a href="/"><span class="blind">네이버</span></a>
@@ -358,7 +368,23 @@
                         <a href="https://recruit.navercorp.com" class="gnb_menu_item recruit" target="_blank">채용</a>
                     </li>
                 </ul></nav>
-                <div class="header_util item">유틸</div>
+                <div class="header_util item">
+                    <div class="header_lang">
+                        <a href="/" aria-selected="true">KOR</a>
+                        <a href="/en" aria-selected="false">ENG</a>
+                    </div>    
+                    <div class="sitemap_box">
+                        <button type="button" class="btn_sitemap">
+                            <span class="blind">사이트맵 열고 닫기</span>
+                            <span class="btn_line"></span>
+                            <span class="btn_line"></span>
+                            <span class="btn_line"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="sitemap">
+                <div class="box"></div>
             </div>
         </header>
         <!-- //header -->
