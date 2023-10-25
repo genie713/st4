@@ -1,9 +1,16 @@
 /* .my-banner 시작 */
 .my-banner{
+<<<<<<< HEAD
     --my-banner-top-padding:0px;
     --my-banner-bottom-padding:0px;
     --my-banner-wrap-width:100%;
     --my-banner-wrap-max-width:1200px;
+=======
+    --my-banner-top-padding:150px;
+    --my-banner-bottom-padding:5px;
+    --my-banner-wrap-width:94%;
+    --my-banner-wrap-max-width:1240px;
+>>>>>>> 2a0e5d380a09f3bfde7affe4512710d795a234cb
     --my-banner-gap:20px;
     --my-banner-item-min-width:300px; /*원이미지크기를 지정하세요*/
   }
